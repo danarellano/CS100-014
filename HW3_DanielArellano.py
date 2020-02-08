@@ -82,6 +82,36 @@ print('Done.')
 print('\nQuestion 2:')
 shelly.clear()
 
+shelly.forward(50)
+shelly.pendown()
+shelly.left(90)
+shelly.circle(50)
+shelly.right(90)
+
+shelly.penup()
+shelly.forward(50)
+shelly.pendown()
+shelly.left(90)
+shelly.circle(100)
+shelly.right(90)
+
+shelly.penup()
+shelly.forward(50)
+shelly.pendown()
+shelly.left(90)
+shelly.circle(150)
+shelly.right(90)
+
+shelly.penup()
+shelly.forward(50)
+shelly.pendown()
+shelly.left(90)
+shelly.circle(200)
+shelly.right(90)
+
+shelly.penup()
+shelly.setposition(0,0)
+
 
 input('\n\nPress enter to exit...')
 
