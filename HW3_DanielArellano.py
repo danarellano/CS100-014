@@ -29,7 +29,7 @@ shelly.forward(100)
 shelly.penup()
 shelly.left(120)
 shelly.backward(10)
-print('Done.')
+print(' Done.')
 
 # Square:
 print('Drawing Square...')
@@ -53,7 +53,7 @@ shelly.penup()
 shelly.left(90)
 shelly.forward(20)
 shelly.right(90)
-print('Done.')
+print(' Done.')
 
 #Pentagon:
 print('Drawing Pentagon...')
@@ -71,11 +71,16 @@ shelly.right(72)
 shelly.forward(100)
 shelly.right(72)
 shelly.forward(100)
+print(' Done.')
+
+print('Reseting...')
 # Go back home (reset)
 shelly.penup()
 shelly.left(109)
 shelly.forward(20)
-print('Done.')
+print(' Done.')
+
+input('\nPress enter to continue...')
 
 
 ### QUESTION 2 ###
@@ -90,7 +95,7 @@ shelly.pendown()
 shelly.left(90)
 shelly.circle(50)
 shelly.right(90)
-print('Done.')
+print(' Done.')
 
 print('Drawing 2nd circle...')
 # Create spacing (gap) between circles
@@ -101,7 +106,7 @@ shelly.pendown()
 shelly.left(90)
 shelly.circle(100)
 shelly.right(90)
-print('Done.')
+print(' Done.')
 
 print('Drawing 3rd circle...')
 # Create spacing (gap) between circles
@@ -112,7 +117,7 @@ shelly.pendown()
 shelly.left(90)
 shelly.circle(150)
 shelly.right(90)
-print('Done.')
+print(' Done.')
 
 print('Drawing 4th circle...')
 # Create spacing (gap) between circles
@@ -123,25 +128,29 @@ shelly.pendown()
 shelly.left(90)
 shelly.circle(200)
 shelly.right(90)
-print('Done.')
+print(' Done.')
 
 print('Reseting...')
 # Shelly, go back home. (reset)
 shelly.penup()
 shelly.setposition(0,0)
-print('Done.')
+print(' Done.')
+
+input('\nPress enter to continue...')
 
 
 ### QUESTION 3 ###
 print('\nQuestion 3:')
-
+ 
 a = math.factorial(100)
-print('  a)  100! = ' + str(a))
-b = math.log2(1000000)
-print('  b)  The log(base 2) of 1,000,000 is ' + str(b))
-c = math.gcd(69,9)
-print('  c)  The greatest common divisor of 63 and 49 is ' + str(c))
+print('  a) 100! = ' + str(a))
+print('\n  *Note: TECHINCALLY = 9.33e+157 but dont access to the "Decimal" or "Format" functions\n')
 
+b = math.log2(1000000)
+print('\n  b) The log(base 2) of 1,000,000 is ' + str(b))
+
+c = math.gcd(69,9)
+print('\n  c) The greatest common divisor of 63 and 49 is ' + str(c))
 
 
 input('\n\nPress enter to exit...')
