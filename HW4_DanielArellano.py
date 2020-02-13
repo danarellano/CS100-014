@@ -74,10 +74,10 @@ else:
 print('\nQuestion 3:')
 
 # Ask user for color, width, length, and shape to draw:
-color = input('what color? ')
+color = input('what color? ').lower()
 width = int(input('what line width? '))
 length = int(input('what line length? '))
-shape = input('line, triangle or square? ')
+shape = input('line, triangle or square? ').lower()
 
 # Start turtle/canvas
 aScreen = turtle.Screen()
@@ -93,19 +93,25 @@ if shape == 'line':
 
 # Draw triangle (if requested)
 elif shape == 'triangle':
-    # Repeat 3 times
-    for times in range(3):
-        # Draw one side of the triangle 
-        shelly.forward(length)
-        shelly.right(120)
+    # Draw one side of the triangle (three times) 
+    shelly.forward(length)
+    shelly.right(120)
+    shelly.forward(length)
+    shelly.right(120)
+    shelly.forward(length)
+    shelly.right(120)
 
 # Draw square (if requested)
 elif shape == 'square':
-    # Repeat 4 times
-    for times in range(4):
-        # Draw one side of the square
-        shelly.forward(length)
-        shelly.right(90)
+    # Draw one side of the square (four times)
+    shelly.forward(length)
+    shelly.right(90)
+    shelly.forward(length)
+    shelly.right(90)
+    shelly.forward(length)
+    shelly.right(90)
+    shelly.forward(length)
+    shelly.right(90)
 
 
 input('\n\nPress enter to exit...')
