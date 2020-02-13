@@ -4,8 +4,10 @@ CS 100 2020S Section 014
 HW 04, February 11, 2020
 '''
 
+import turtle
+
 ### QUESTION 1 ###
-print('Question 1:\n')
+print('Question 1:')
 
 a = 3
 b = 4
@@ -33,7 +35,7 @@ if a**2 + b**2 == c**2:
 
 
 ### QUESTION 2 ###
-print('\n\nQuestion 2:\n')
+print('\nQuestion 2:')
 
 a = 3
 b = 4
@@ -69,6 +71,41 @@ else:
 
 
 ### Question 3 ###
+print('\nQuestion 3:')
+
+# Ask user for color, width, length, and shape to draw:
+color = input('what color? ')
+width = int(input('what line width? '))
+length = int(input('what line length? '))
+shape = input('line, triangle or square? ')
+
+# Start turtle/canvas
+aScreen = turtle.Screen()
+shelly = turtle.Turtle()
+
+# Set color and width
+shelly.color(color)
+shelly.width(width)
+
+# Draw line (if requested)
+if shape == 'line':
+    shelly.forward(length)
+
+# Draw triangle (if requested)
+elif shape == 'triangle':
+    # Repeat 3 times
+    for times in range(3):
+        # Draw one side of the triangle 
+        shelly.forward(length)
+        shelly.right(120)
+
+# Draw square (if requested)
+elif shape == 'square':
+    # Repeat 4 times
+    for times in range(4):
+        # Draw one side of the square
+        shelly.forward(length)
+        shelly.right(90)
 
 
 input('\n\nPress enter to exit...')
