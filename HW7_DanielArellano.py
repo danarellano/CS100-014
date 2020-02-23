@@ -10,7 +10,9 @@ comment after the code.
 '''
 
 '''
-PROBLEM 0. Put your name and assignment information here.
+Daniel Arellano
+CS 100 2020S Section 014
+HW 06, February 23, 2020
 '''
 
 # The Bells
@@ -195,6 +197,9 @@ Come quickly to my veins and to my mouth.
 
 Speak through my speech, and through my blood. 
 '''
+# TEMP #
+text = theBells
+########
 
 import string
 
@@ -210,31 +215,41 @@ def litCricFriend(wordList, text):
     # PROBLEM 1. Write a string method call that lower cases all
     # of the characters in text. One line of code. Hint: assign the
     # lower-cased text to a new variable name.
+    lowercaseText = text.lower()
 
     # PROBLEM 2. Write a string method call that replaces every
     # m-dash ('--') in the lower-cased text with a space (' '). 
     # One line of code.
+    removeMDash = lowercaseText.replace('--', ' ')
     
     # PROBLEM 3. Write a string method call that splits text into a
     # list of words (after they have been lower-cased, and the
     # m-dashes removed). One line of code.
+    listOfWords = removeMDash.split()
 
     # PROBLEM 4. Write a loop that creates a new word list, using a
     # string method to strip the words from the list created in Problem 3
     # of all leading and trailing punctuation. Hint: the string library,
     # which is imported above, contains a constant named punctuation.
     # Three lines of code.
+    newListOfWords = []
+    for word in listOfWords:
+        newListOfWords.append(word.strip(string.punctuation))
 
     # PROBLEM 5. Write a loop that sums the number of times that the
     # words in wordList occur in the list from Problem 4. Hint 1: you
     # can use a list method to do the counting. Hint 2: lower case the
     # words in wordList. Between three and five lines of code. (It
     # depends on your coding style -- various styles are OK.)
+    sumOfWords = 0
+    for word in wordList:
+        sumOfWords += newListOfWords.count(word.lower())
 
     # PROBLEM 6. Calculate the ratio of the number from Problem 5
     # to the number of words in text. Return this ratio. Between one
     # and three lines of code. (It depends on your coding style --
     # various styles are OK.)
+    return sumOfWords/len(newListOfWords)
 
 # PROBLEM 7. Call litCricFriend() four times to find the frequency
 # of the indefinite articles 'a' and 'an' and the definite article
@@ -244,6 +259,17 @@ def litCricFriend(wordList, text):
 # >>> bellsAAnFrequency 0.07265587064676617.
 
 # (That is a made-up number.) Each function call takes one line.
+indefiniteArticles = ['a', 'an']
+print('\nThe Bells frequency of "a", "an" =', end=' ')
+print(litCricFriend(indefiniteArticles, theBells))
+print('\nCanto XII frequency of "a", "an" =', end=' ')
+print(litCricFriend(indefiniteArticles, cantoXII))
+
+definiteArticles = ['the']
+print('\nThe Bells frequency of "the" =', end=' ')
+print(litCricFriend(definiteArticles,theBells))
+print('\nCanto XII frequency of "the" =', end=' ')
+print(litCricFriend(definiteArticles,cantoXII))
 
 # PROBLEM 8. Do the results show that Poe and Neruda use 'a' and 'an'
 # differently? Do the results show that Poe and Neruda use 'the'
@@ -252,4 +278,4 @@ def litCricFriend(wordList, text):
 '''
 Put your answer to PROBLEM 8 here.
 '''
-
+input('\n\nPress Enter to exit...')
