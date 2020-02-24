@@ -197,10 +197,6 @@ Come quickly to my veins and to my mouth.
 
 Speak through my speech, and through my blood. 
 '''
-# TEMP #
-text = theBells
-########
-
 import string
 
 def litCricFriend(wordList, text):
@@ -276,6 +272,9 @@ print(litCricFriend(definiteArticles,cantoXII))
 # differently?
 
 '''
-Put your answer to PROBLEM 8 here.
+Yes, based on the result of function litCritFriend,
+the Bells(Poe) and Canto XII(Neruda) do in fact use "a" and "an"
+at different frequency. The same can be said on the frequency of "the."
 '''
+
 input('\n\nPress Enter to exit...')
